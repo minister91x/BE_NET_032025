@@ -10,6 +10,13 @@ namespace BE_032025.ConsoleApp
     {
         static void Main(string[] args)
         {
+            string name = "My name is Quan";
+
+            var name2 = "abc";
+            var name3 = 1;
+
+            Console.WriteLine("Xin chào {0}",name);
+           
         }
     }
 }
