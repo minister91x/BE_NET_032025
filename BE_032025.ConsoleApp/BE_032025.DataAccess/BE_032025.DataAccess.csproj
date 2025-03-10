@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5F75796C-B2DA-4499-AF8F-2C83963D1055}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>BE_032025.ConsoleApp</RootNamespace>
-    <AssemblyName>BE_032025.ConsoleApp</AssemblyName>
+    <ProjectGuid>{5254D0C9-54B2-4F8C-8979-AF27A2CF507D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BE_032025.DataAccess</RootNamespace>
+    <AssemblyName>BE_032025.DataAccess</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,21 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bai1.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Bai2.cs" />
+    <Compile Include="Bai3.cs" />
+    <Compile Include="DataTooLongExeption.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BE_032025.Common\BE_032025.Common.csproj">
       <Project>{5cc6ce59-90f4-4747-ada5-c15079890a22}</Project>
       <Name>BE_032025.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\BE_032025.DataAccess\BE_032025.DataAccess.csproj">
-      <Project>{5254d0c9-54b2-4f8c-8979-af27a2cf507d}</Project>
-      <Name>BE_032025.DataAccess</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

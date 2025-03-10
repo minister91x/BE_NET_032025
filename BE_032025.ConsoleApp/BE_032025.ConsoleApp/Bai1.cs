@@ -29,5 +29,7 @@ namespace BE_032025.ConsoleApp
         {
             Console.WriteLine("Hieu la {0}-{1}", (numberA - numberB), Name);
         }
+
+       
     }
 }

@@ -1,0 +1,9 @@
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.DataAccess\bin\Debug\BE_032025.DataAccess.dll
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.DataAccess\bin\Debug\BE_032025.DataAccess.pdb
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.DataAccess\bin\Debug\BE_032025.Common.dll
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.DataAccess\bin\Debug\BE_032025.Common.pdb
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.DataAccess\obj\Debug\BE_032025.DataAccess.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.DataAccess\obj\Debug\BE_032025.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.DataAccess\obj\Debug\BE_03202.9FD8799B.Up2Date
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.DataAccess\obj\Debug\BE_032025.DataAccess.dll
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.DataAccess\obj\Debug\BE_032025.DataAccess.pdb

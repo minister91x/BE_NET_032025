@@ -1,0 +1,6 @@
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.Common\bin\Debug\BE_032025.Common.dll
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.Common\bin\Debug\BE_032025.Common.pdb
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.Common\obj\Debug\BE_032025.Common.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.Common\obj\Debug\BE_032025.Common.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.Common\obj\Debug\BE_032025.Common.dll
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.Common\obj\Debug\BE_032025.Common.pdb
