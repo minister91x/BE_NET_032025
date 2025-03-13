@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using BE_032025.DataAccess;
 
 namespace BE_032025.ConsoleApp
 {
@@ -156,28 +157,55 @@ namespace BE_032025.ConsoleApp
             //}
 
 
-            int a = 100;
-            Console.WriteLine(" before Tham tri {0}", a);
-            Common.ValidateDataInput.Tham_Tri(a);
-            Console.WriteLine(" after Tham tri {0}", a);
+            //int a = 100;
+            //Console.WriteLine(" before Tham tri {0}", a);
+            //Common.ValidateDataInput.Tham_Tri(a);
+            //Console.WriteLine(" after Tham tri {0}", a);
 
-            int b = 1;
-            Console.WriteLine(" before Tham tri {0}", b);
-            var result = Common.ValidateDataInput.Tham_Chieu(out b); // b là tham chiếu của b
-            Console.WriteLine(" after Tham_Chieu {0}- {1}", result, b);
+            //int b = 1;
+            //Console.WriteLine(" before Tham tri {0}", b);
+            //var result = Common.ValidateDataInput.Tham_Chieu(out b); // b là tham chiếu của b
+            //Console.WriteLine(" after Tham_Chieu {0}- {1}", result, b);
 
-            try
+            //try
+            //{
+            //   BE_032025.DataAccess.Bai3.UserInput("Đây là một chuỗi rất dài ...");
+            //}
+            //catch (DataTooLongExeption e)
+            //{
+            //    Console.WriteLine(e.Message +" | ex stacktrace:"+ e.StackTrace );
+            //}
+            //catch (Exception otherExeption)
+            //{
+            //    Console.WriteLine(otherExeption.Message);
+            //}
+
+
+
+            var product = new MyProduct();
+            //MyProduct product2 = new MyProduct();
+
+            product.Id = 1;
+            product.Name = "Iphone 20 Test";
+
+            Console.WriteLine("Product ID ={0} | Name={1}", product.Id, product.Name)
+
+
+          int trangthai = 3;
+            if (trangthai == 3) // 3 này 
             {
-               BE_032025.DataAccess.Bai3.UserInput("Đây là một chuỗi rất dài ...");
+
             }
-            catch (DataTooLongExeption e)
+            if (trangthai == (int)TrangThai_ThanhToan.THANH_CONG) // 3 này 
             {
-                Console.WriteLine(e.Message +" | ex stacktrace:"+ e.StackTrace );
+
             }
-            catch (Exception otherExeption)
-            {
-                Console.WriteLine(otherExeption.Message);
-            }
+
+            int[] myArray = { 1, 3, 5, 19 };
+
+            var Length = myArray.Length;
+
+           // var sum = myArray.GetLength
 
         }
 
