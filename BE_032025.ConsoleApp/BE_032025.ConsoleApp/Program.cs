@@ -188,10 +188,10 @@ namespace BE_032025.ConsoleApp
             product.Id = 1;
             product.Name = "Iphone 20 Test";
 
-            Console.WriteLine("Product ID ={0} | Name={1}", product.Id, product.Name)
+            Console.WriteLine("Product ID ={0} | Name={1}", product.Id, product.Name);
 
 
-          int trangthai = 3;
+            int trangthai = 3;
             if (trangthai == 3) // 3 này 
             {
 
@@ -205,7 +205,35 @@ namespace BE_032025.ConsoleApp
 
             var Length = myArray.Length;
 
-           // var sum = myArray.GetLength
+            // var sum = myArray.GetLength
+
+
+            var employeerManager = new Employeer_Manager();
+
+            //var result = employeerManager.Employeer_Insert("<applet", "MR QUÂN", DateTime.Now);
+
+            //switch (result)
+            //{
+            //    case (int)EmployeerManager_Status.THANH_CONG:
+            //        Console.WriteLine("Thêm thành công!");
+
+            //        break;
+
+            //    case (int)EmployeerManager_Status.MA_NHAN_VIEN_KHONG_HOP_LE:
+            //        Console.WriteLine("Mã nhân viên không hợp lê!");
+
+            //        break;
+
+            //    case (int)EmployeerManager_Status.TEN_KHONG_HOP_LE:
+            //        Console.WriteLine("Tên nhân viên không hợp lê!");
+
+            //        break;
+            //}
+
+            var path = "C:\\Users\\Admin\\Desktop\\Book_Employeer.xlsx";
+            var rs = employeerManager.Employeer_Insert_FromExcelFile(path);
+
+            Console.WriteLine(rs);
 
         }
 

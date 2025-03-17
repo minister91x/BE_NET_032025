@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace BE_032025.Common
@@ -33,39 +34,53 @@ namespace BE_032025.Common
 
 
         }
-        public static int Tham_Tri(int a)
+
+        public static bool CheckValidateString(string inputString)
         {
-            return a * a;
-        }
-        public static int Tham_Chieu(out int a) // b
-        {
-            a = 2000;
-            return 2;
+            if (string.IsNullOrEmpty(inputString))
+            {
+                return false;
+            }
+
+            if (int.TryParse(inputString, out int num))
+            {
+                return false;
+            }
+
+            if (inputString.Length > 200)
+            {
+                return false;
+            }
+
+            return true;
         }
 
-        public static int abc(int a, int b, int c)
+
+        public static bool CheckSpecicalCharacter(string inputString)
         {
-            return a + b;
+            var regexItem = new Regex("^[a-zA-Z0-9 ]*$");
+
+            if (!regexItem.IsMatch(inputString)) { return false; }
+            return true;
         }
 
-        public static int Chia_Hai_So()
+        public static bool CheckXSSInput(string input)
         {
             try
             {
-                int a = 10;
-                int b = 0;
-                return a / b;
-            }
-            catch (DivideByZeroException ex)
-            {
-               Console.WriteLine(ex.Message);
+                var listdangerousString = new List<string> { "<applet", "<body", "<embed", "<frame", "<script", "<frameset", "<html", "<iframe", "<img", "<style", "<layer", "<link", "<ilayer", "<meta", "<object", "<h", "<input", "<a", "&lt", "&gt" };
+                if (string.IsNullOrEmpty(input)) return false;
+                foreach (var dangerous in listdangerousString)
+                {
+                    if (input.Trim().ToLower().IndexOf(dangerous) >= 0) return false;
+                }
+                return true;
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Source);
+                return false;
             }
-            return 0;
-
         }
+
     }
 }
