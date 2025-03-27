@@ -80,6 +80,7 @@
     <Compile Include="Employeer_Manager.cs" />
     <Compile Include="Function.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Struct\Bai6_DateTime.cs" />
     <Compile Include="Struct\Employeer.cs" />
   </ItemGroup>
   <ItemGroup>

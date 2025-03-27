@@ -138,5 +138,19 @@ namespace BE_032025.DataAccess
 
             return ketqua;
         }
+
+        //public List<string> FindSeniorityEmployees(Employeer em)
+        //{
+        //    List<string> result = new List<string>();
+        //    foreach (var emp in employees)
+        //    {
+
+        //        if (emp.seniority == seniority)
+        //        {
+        //            result.Add($"{emp.EmployeeName} - {seniority} năm");
+        //        }
+        //    }
+        //    return result;
+        //}
     }
 }
