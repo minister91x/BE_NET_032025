@@ -4,8 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media;
 using System.Xml.Linq;
 using BE_032025.DataAccess;
+using BE_032025.DataAccess.Class;
 using BE_032025.DataAccess.Struct;
 
 namespace BE_032025.ConsoleApp
@@ -235,144 +237,189 @@ namespace BE_032025.ConsoleApp
             //var path = "C:\\Users\\Admin\\Desktop\\Book_Employeer.xlsx";
             //var rs = employeerManager.Employeer_Insert_FromExcelFile(path);
 
-            var buoi6 = new Bai6_DateTime();
-            buoi6.DateTimeDemo();
-            Console.WriteLine();
+            //var buoi6 = new Bai6_DateTime();
+            //buoi6.DateTimeDemo();
+            //Console.WriteLine();
 
-            var emp = new Employeer();
-            emp.EmployeerName = "Mr Quân1234";
+            //var emp = new Employeer();
+            //emp.EmployeerName = "Mr Quân1234";
 
-            var car = new Car();
-            car.CarName = "Xe Bus";
+            //var car = new Car();
+            //car.CarName = "Xe Bus";
 
-            var function = new Function();
+            //var function = new Function();
 
-            var result = function.Phep_Cong<int>(10, 10);
-            Console.WriteLine("Kết quả int: {0}", result);
+            //var result = function.Phep_Cong<int>(10, 10);
+            //Console.WriteLine("Kết quả int: {0}", result);
 
-            var result2 = function.Phep_Cong<double>(10.5, 10.5);
-            Console.WriteLine("Kết quả double: {0}", result2);
+            //var result2 = function.Phep_Cong<double>(10.5, 10.5);
+            //Console.WriteLine("Kết quả double: {0}", result2);
 
-            var result3 = function.Phep_Cong<string>("Chuoi 1", "Chuoi 2");
+            //var result3 = function.Phep_Cong<string>("Chuoi 1", "Chuoi 2");
 
-            Console.WriteLine("Kết quả string: {0}", result3);
+            //Console.WriteLine("Kết quả string: {0}", result3);
 
-            var result4 = function.Phep_Cong<float>(10, 10);
-            Console.WriteLine("Kết quả float: {0}", result4);
+            //var result4 = function.Phep_Cong<float>(10, 10);
+            //Console.WriteLine("Kết quả float: {0}", result4);
 
-            var result5 = function.Function_DemoStruct<Employeer>(emp);
-            Console.WriteLine("Kết quả Function_DemoStruct: {0}", result5.EmployeerName);
+            //var result5 = function.Function_DemoStruct<Employeer>(emp);
+            //Console.WriteLine("Kết quả Function_DemoStruct: {0}", result5.EmployeerName);
 
-            var result6 = function.Function_DemoStruct<Car>(car);
+            //var result6 = function.Function_DemoStruct<Car>(car);
 
-            Console.WriteLine("Kết quả Function_DemoStruct: {0}", result6.CarName);
-
-
-            var result7 = new DemoGeneric_WithClass<int>();
-            result7.ThuocTinh = 10;
-            Console.WriteLine("Kết quả DemoGeneric_WithClass: {0}", result7.ThuocTinh);
+            //Console.WriteLine("Kết quả Function_DemoStruct: {0}", result6.CarName);
 
 
-            var result8 = new DemoGeneric_WithClass<string>();
-            result8.ThuocTinh = "BE_032025";
-            Console.WriteLine("Kết quả DemoGeneric_WithClass: {0}", result8.ThuocTinh);
-
-            var result9 = new DemoGeneric_WithClass<Person>();
-            result9.ThuocTinh = new Person
-            {
-                PersonAddress = "Hà Nội",
-                PersonName = "MR QUÂN",
-                PersonPhone = "123"
-            };
-            Console.WriteLine("Kết quả DemoGeneric_WithClass PersonName: {0}", result9.ThuocTinh.PersonName);
+            //var result7 = new DemoGeneric_WithClass<int>();
+            //result7.ThuocTinh = 10;
+            //Console.WriteLine("Kết quả DemoGeneric_WithClass: {0}", result7.ThuocTinh);
 
 
-            Dictionary<string, string> _phoneBook = new Dictionary<string, string>()
-            {
-            {"Trump", "0123.456.789" },
-            {"Obama", "0987.654.321" },
-            {"Putin", "0135.246.789" }
-            };
+            //var result8 = new DemoGeneric_WithClass<string>();
+            //result8.ThuocTinh = "BE_032025";
+            //Console.WriteLine("Kết quả DemoGeneric_WithClass: {0}", result8.ThuocTinh);
+
+            //var result9 = new DemoGeneric_WithClass<Person>();
+            //result9.ThuocTinh = new Person
+            //{
+            //    PersonAddress = "Hà Nội",
+            //    PersonName = "MR QUÂN",
+            //    PersonPhone = "123"
+            //};
+            //Console.WriteLine("Kết quả DemoGeneric_WithClass PersonName: {0}", result9.ThuocTinh.PersonName);
 
 
-            Dictionary<int, string> _phoneBookInt = new Dictionary<int, string>()
-            {
-            {1, "0123.456.789" },
-            {2, "0987.654.321" },
-            {3, "0135.246.789" }
-            };
+            //Dictionary<string, string> _phoneBook = new Dictionary<string, string>()
+            //{
+            //{"Trump", "0123.456.789" },
+            //{"Obama", "0987.654.321" },
+            //{"Putin", "0135.246.789" }
+            //};
 
 
-            foreach (KeyValuePair<string, string> entry in _phoneBook)
-            {
-                Console.WriteLine($" -> {entry.Key} : {entry.Value}");
-            }
+            //Dictionary<int, string> _phoneBookInt = new Dictionary<int, string>()
+            //{
+            //{1, "0123.456.789" },
+            //{2, "0987.654.321" },
+            //{3, "0135.246.789" }
+            //};
 
 
-            ArrayList arrayList = new ArrayList();
-            arrayList.Add(1);
-            arrayList.Add("BE_032025");
-            arrayList.Add(1.5);
-            arrayList.Add(true);
-
-            foreach (var item in arrayList)
-            {
-                Console.WriteLine("{0}", item);
-            }
+            //foreach (KeyValuePair<string, string> entry in _phoneBook)
+            //{
+            //    Console.WriteLine($" -> {entry.Key} : {entry.Value}");
+            //}
 
 
+            //ArrayList arrayList = new ArrayList();
+            //arrayList.Add(1);
+            //arrayList.Add("BE_032025");
+            //arrayList.Add(1.5);
+            //arrayList.Add(true);
 
-            Hashtable hashtable = new Hashtable();
-            hashtable.Add("Key1", "Value1");
-            hashtable.Add("Key2", "Value2");
-            Console.WriteLine(hashtable["Key1"]);
-
-            SortedList mySL = new SortedList();
-            mySL.Add("Third", "!");
-            mySL.Add("Second", "World");
-            mySL.Add("First", "Hello");
-
-            Console.WriteLine(" Count: {0}", mySL.Count);
-            Console.WriteLine(" Capacity: {0}", mySL.Capacity);
-            Console.WriteLine(" get by Keys: {0}", mySL["First"]);
-
-
-            Console.WriteLine(" get by Index: ");
-            Console.WriteLine("\t-KEY-\t-VALUE-");
-            for (int i = 0; i < mySL.Count; i++)
-            {
-                Console.WriteLine("\t{0}:\t{1}",
-                    mySL.GetKey(i),
-                    mySL.GetByIndex(i));
-            }
-
-            Stack myStack = new Stack();
-            myStack.Push("Hello");
-            myStack.Push("World");
-            myStack.Push("!");
-            Console.WriteLine("myStack");
-            Console.WriteLine("\tCount: {0}", myStack.Count);
-            Console.Write("\tValues:");
-            foreach (Object obj in myStack) Console.Write(" {0}", obj);
-
-
-            Queue myQ = new Queue();
-            myQ.Enqueue("Hello");
-            myQ.Enqueue("World");
-            myQ.Enqueue("!");
-            Console.WriteLine("myQ");
-            Console.WriteLine("\tCount: {0}", myQ.Count); Console.Write("\tValues:");
-
-            foreach (Object obj in myQ) Console.Write(" {0}", obj);
+            //foreach (var item in arrayList)
+            //{
+            //    Console.WriteLine("{0}", item);
+            //}
 
 
 
-            var person = new { Name = "John", Age = 30, City = "New York" };
+            //Hashtable hashtable = new Hashtable();
+            //hashtable.Add("Key1", "Value1");
+            //hashtable.Add("Key2", "Value2");
+            //Console.WriteLine(hashtable["Key1"]);
 
-            Console.WriteLine("Name: " + person.Name);
-            Console.WriteLine("Age: " + person.Age);
-            Console.WriteLine("City: " + person.City);
+            //SortedList mySL = new SortedList();
+            //mySL.Add("Third", "!");
+            //mySL.Add("Second", "World");
+            //mySL.Add("First", "Hello");
 
+            //Console.WriteLine(" Count: {0}", mySL.Count);
+            //Console.WriteLine(" Capacity: {0}", mySL.Capacity);
+            //Console.WriteLine(" get by Keys: {0}", mySL["First"]);
+
+
+            //Console.WriteLine(" get by Index: ");
+            //Console.WriteLine("\t-KEY-\t-VALUE-");
+            //for (int i = 0; i < mySL.Count; i++)
+            //{
+            //    Console.WriteLine("\t{0}:\t{1}",
+            //        mySL.GetKey(i),
+            //        mySL.GetByIndex(i));
+            //}
+
+            //Stack myStack = new Stack();
+            //myStack.Push("Hello");
+            //myStack.Push("World");
+            //myStack.Push("!");
+            //Console.WriteLine("myStack");
+            //Console.WriteLine("\tCount: {0}", myStack.Count);
+            //Console.Write("\tValues:");
+            //foreach (Object obj in myStack) Console.Write(" {0}", obj);
+
+
+            //Queue myQ = new Queue();
+            //myQ.Enqueue("Hello");
+            //myQ.Enqueue("World");
+            //myQ.Enqueue("!");
+            //Console.WriteLine("myQ");
+            //Console.WriteLine("\tCount: {0}", myQ.Count); Console.Write("\tValues:");
+
+            //foreach (Object obj in myQ) Console.Write(" {0}", obj);
+
+
+
+            //var person = new { Name = "John", Age = 30, City = "New York" };
+
+            //Console.WriteLine("Name: " + person.Name);
+            //Console.WriteLine("Age: " + person.Age);
+            //Console.WriteLine("City: " + person.City);
+
+            // Đối tương = new Class 
+            var xebus = new DataAccess.Class.MyCar();
+            xebus.Id = 1; // Gán giá trị cho thuộc tính Id
+            xebus.Brand = "Toyota";
+            xebus.Model = "Xe Bus";
+            xebus.Year = 2021;
+            xebus.Color = "Đỏ";
+
+
+            xebus.Display_CuaToi();
+
+            Console.WriteLine("Id: {0}", xebus.Id);
+            Console.WriteLine("Brand: {0}", xebus.Brand);
+            Console.WriteLine("Model: {0}", xebus.Model);
+            Console.WriteLine("Year: {0}", xebus.Year);
+            Console.WriteLine("Color: {0}", xebus.Color);
+
+            var xecon = new DataAccess.Class.MyCar(2, "MEC", "Xe SIEU SANG", 2025, "Xanh-Đen");
+
+            Console.WriteLine("Id: {0}", xecon.Id);
+            Console.WriteLine("Brand: {0}", xecon.Brand);
+            Console.WriteLine("Model: {0}", xecon.Model);
+            Console.WriteLine("Year: {0}", xecon.Year);
+            Console.WriteLine("Color: {0}", xecon.Color);
+
+
+            var nhanvien = new Employeer_Partial();
+
+            nhanvien.DoWork();
+            nhanvien.GoToLunch();
+
+
+            var conbo = new DataAccess.AstractClass.Cow();
+            conbo.Name = "BÒ CÔ BÊ";
+            conbo.MakeSound();
+
+
+            var conchim = new DataAccess.AstractClass.Bird();
+            conchim.Name = "Chích chòe";
+            conchim.MakeSound();
+
+
+            var hinhvuong = new DataAccess.AstractClass.HinhVuong(5);
+            Console.WriteLine("Diện tích hình vuông: {0}", hinhvuong.TinhDienTich());
+            Console.WriteLine("Chu vi hình vuông: {0}", hinhvuong.TinhChuVi());
         }
 
     }

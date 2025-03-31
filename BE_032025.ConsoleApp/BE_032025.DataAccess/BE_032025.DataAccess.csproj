@@ -73,12 +73,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AstractClass\Aninal.cs" />
+    <Compile Include="AstractClass\Bird.cs" />
+    <Compile Include="AstractClass\Cow.cs" />
+    <Compile Include="AstractClass\HinhHoc.cs" />
+    <Compile Include="AstractClass\HinhVuong.cs" />
     <Compile Include="Bai2.cs" />
     <Compile Include="Bai3.cs" />
+    <Compile Include="Class\Employeer_Partial.cs" />
+    <Compile Include="Class\MyCar.cs" />
+    <Compile Include="Class\MyCar2.cs" />
     <Compile Include="DataTooLongExeption.cs" />
     <Compile Include="enum\EmployeerManager_Status.cs" />
     <Compile Include="Employeer_Manager.cs" />
     <Compile Include="Function.cs" />
+    <Compile Include="Interface\AninalManager.cs" />
+    <Compile Include="Interface\IAnimal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Struct\Bai6_DateTime.cs" />
     <Compile Include="Struct\Employeer.cs" />
