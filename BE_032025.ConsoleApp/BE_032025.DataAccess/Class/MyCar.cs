@@ -22,7 +22,7 @@ namespace BE_032025.DataAccess.Class
         }
 
         // Phương thức khởi tạo có tham số  
-        public MyCar(int id, string brand, string model, int year,string color)
+        public MyCar(int id, string brand, string model, int year, string color)
         {
             Id = id;
             Brand = brand;

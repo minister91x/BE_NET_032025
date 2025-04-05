@@ -81,8 +81,12 @@
     <Compile Include="Bai2.cs" />
     <Compile Include="Bai3.cs" />
     <Compile Include="Class\Employeer_Partial.cs" />
+    <Compile Include="Class\MayTinhDell.cs" />
+    <Compile Include="Class\MayTinhLeNoVo.cs" />
+    <Compile Include="Class\MayViTinh.cs" />
     <Compile Include="Class\MyCar.cs" />
     <Compile Include="Class\MyCar2.cs" />
+    <Compile Include="Class\PersonClass.cs" />
     <Compile Include="DataTooLongExeption.cs" />
     <Compile Include="enum\EmployeerManager_Status.cs" />
     <Compile Include="Employeer_Manager.cs" />

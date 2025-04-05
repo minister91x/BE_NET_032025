@@ -376,50 +376,78 @@ namespace BE_032025.ConsoleApp
             //Console.WriteLine("City: " + person.City);
 
             // Đối tương = new Class 
-            var xebus = new DataAccess.Class.MyCar();
-            xebus.Id = 1; // Gán giá trị cho thuộc tính Id
-            xebus.Brand = "Toyota";
-            xebus.Model = "Xe Bus";
-            xebus.Year = 2021;
-            xebus.Color = "Đỏ";
+            //var xebus = new DataAccess.Class.MyCar();
+            //xebus.Id = 1; // Gán giá trị cho thuộc tính Id
+            //xebus.Brand = "Toyota";
+            //xebus.Model = "Xe Bus";
+            //xebus.Year = 2021;
+            //xebus.Color = "Đỏ";
 
 
-            xebus.Display_CuaToi();
+            //xebus.Display_CuaToi();
 
-            Console.WriteLine("Id: {0}", xebus.Id);
-            Console.WriteLine("Brand: {0}", xebus.Brand);
-            Console.WriteLine("Model: {0}", xebus.Model);
-            Console.WriteLine("Year: {0}", xebus.Year);
-            Console.WriteLine("Color: {0}", xebus.Color);
+            //Console.WriteLine("Id: {0}", xebus.Id);
+            //Console.WriteLine("Brand: {0}", xebus.Brand);
+            //Console.WriteLine("Model: {0}", xebus.Model);
+            //Console.WriteLine("Year: {0}", xebus.Year);
+            //Console.WriteLine("Color: {0}", xebus.Color);
 
-            var xecon = new DataAccess.Class.MyCar(2, "MEC", "Xe SIEU SANG", 2025, "Xanh-Đen");
+            //var xecon = new DataAccess.Class.MyCar(2, "MEC", "Xe SIEU SANG", 2025, "Xanh-Đen");
 
-            Console.WriteLine("Id: {0}", xecon.Id);
-            Console.WriteLine("Brand: {0}", xecon.Brand);
-            Console.WriteLine("Model: {0}", xecon.Model);
-            Console.WriteLine("Year: {0}", xecon.Year);
-            Console.WriteLine("Color: {0}", xecon.Color);
+            //Console.WriteLine("Id: {0}-{1}", xecon.Id, 1);
+            //Console.WriteLine("Brand: {0}", xecon.Brand);
+            //Console.WriteLine("Model: {0}", xecon.Model);
+            //Console.WriteLine("Year: {0}", xecon.Year);
+            //Console.WriteLine("Color: {0}", xecon.Color);
+
+            //var a = 10;
+            //var b = "số 2";
+
+            //a = 1000;
+
+            //const int c = 1000; // không thể thay đổi giá trị của c
+            //c= 100; // lỗi không thể thay đổi giá trị của c
+
+            //var nhanvien = new Employeer_Partial();
+            //nhanvien.ID = 1;
+            //nhanvien.Name = "MR QUÂN";
+            //nhanvien.Address = "Hà Nội";
+
+            //nhanvien.DoWork();
+            //nhanvien.GoToLunch();
+            //nhanvien.GoToSLeep();
+
+            //var conbo = new DataAccess.AstractClass.Cow();
+            //conbo.Name = "BÒ CÔ BÊ";
+            //conbo.MakeSound();
 
 
-            var nhanvien = new Employeer_Partial();
-
-            nhanvien.DoWork();
-            nhanvien.GoToLunch();
-
-
-            var conbo = new DataAccess.AstractClass.Cow();
-            conbo.Name = "BÒ CÔ BÊ";
-            conbo.MakeSound();
+            //var conchim = new DataAccess.AstractClass.Bird();
+            //conchim.Name = "Chích chòe";
+            //conchim.MakeSound();
 
 
-            var conchim = new DataAccess.AstractClass.Bird();
-            conchim.Name = "Chích chòe";
-            conchim.MakeSound();
+            //var hinhvuong = new DataAccess.AstractClass.HinhVuong(5);
+            //Console.WriteLine("Diện tích hình vuông: {0}", hinhvuong.TinhDienTich());
+            //Console.WriteLine("Chu vi hình vuông: {0}", hinhvuong.TinhChuVi());
+
+            var person = new PersonClass();
+           // person.
+            Console.WriteLine("GetId: {0}", person.GetId());
+            Console.WriteLine("GetFullName: {0}", person.GetFullName());
 
 
-            var hinhvuong = new DataAccess.AstractClass.HinhVuong(5);
-            Console.WriteLine("Diện tích hình vuông: {0}", hinhvuong.TinhDienTich());
-            Console.WriteLine("Chu vi hình vuông: {0}", hinhvuong.TinhChuVi());
+            var maylenovo = new MayTinhLeNoVo();
+            maylenovo.ChieuDai = 10;
+            maylenovo.ChieuRong = 5;
+
+            maylenovo.UpRAM();
+
+
+            var maytinhDell = new MayTinhDell();
+            maytinhDell.ChieuDai = 20;
+            maytinhDell.ChieuRong = 10;
+            maytinhDell.UpRAM();
         }
 
     }
