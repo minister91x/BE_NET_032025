@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BE_032025.DataAccess.Class;
 
-namespace BE_032025.DataAccess.Interface
+namespace BE_032025.DataAccess.Connection
 {
-    public interface IAnimal 
+    public abstract class ConnectionBase
     {
-        void Eat();
+        public abstract void ConnectoDB();
     }
 }

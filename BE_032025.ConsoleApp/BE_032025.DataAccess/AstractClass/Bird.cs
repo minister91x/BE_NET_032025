@@ -8,7 +8,6 @@ namespace BE_032025.DataAccess.AstractClass
 {
     public class Bird : Aninal
     {
-        
         public override void Eat()
         {
             Console.WriteLine("ăn sâu");
