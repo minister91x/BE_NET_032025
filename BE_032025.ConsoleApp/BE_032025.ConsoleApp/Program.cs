@@ -400,7 +400,7 @@ namespace BE_032025.ConsoleApp
             //Console.WriteLine("Year: {0}", xecon.Year);
             //Console.WriteLine("Color: {0}", xecon.Color);
 
-            //var a = 10;
+            var a = 10;
             //var b = "số 2";
 
             //a = 1000;
@@ -432,7 +432,7 @@ namespace BE_032025.ConsoleApp
             //Console.WriteLine("Chu vi hình vuông: {0}", hinhvuong.TinhChuVi());
 
             var person = new PersonClass();
-           // person.
+            // person.
             Console.WriteLine("GetId: {0}", person.GetId());
             Console.WriteLine("GetFullName: {0}", person.GetFullName());
 
@@ -448,6 +448,44 @@ namespace BE_032025.ConsoleApp
             maytinhDell.ChieuDai = 20;
             maytinhDell.ChieuRong = 10;
             maytinhDell.UpRAM();
+
+            var myKey = System.Configuration.ConfigurationManager.AppSettings["MyKey"] ?? "";
+
+            if (string.IsNullOrEmpty(myKey))
+            {
+                return;
+            }
+
+            if (a == 10)
+            {
+
+            }
+
+            var myKey2 = System.Configuration.ConfigurationManager.AppSettings["MyKey"] ?? "";
+
+
+
+
+            if (a == 10)
+            {
+
+            }
+
+            var emp = new Employeer_Partial();
+            var inputData = new Employeer_GoToSleep_InputData
+            {
+                chan = "chăn",
+                com = "cơm",
+                dem = "đêm",
+                denngu = "đèn ngủ",
+                dieuhoa = "điều hòa",
+                giuong = "giường",
+                goi = "gối",
+                dem2 = "đêm 2"
+            };
+            emp.GoToSLeep(inputData);
+
+            emp.GoToSLeep(inputData);
         }
 
     }
