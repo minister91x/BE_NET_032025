@@ -91,9 +91,12 @@
     <Compile Include="Class\MyClassImplimentVitual.cs" />
     <Compile Include="Class\MyClassVitual.cs" />
     <Compile Include="Class\PersonClass.cs" />
+    <Compile Include="Class\Product_GetListResponseData.cs" />
     <Compile Include="Connection\Connection.cs" />
     <Compile Include="Connection\ConnectionBase.cs" />
+    <Compile Include="Connection\GenericConnectionDatabase.cs" />
     <Compile Include="Connection\OracleServerConnection.cs" />
+    <Compile Include="Connection\SqlConnectionDB_Genneric.cs" />
     <Compile Include="Connection\SqlServerConnection.cs" />
     <Compile Include="DataTooLongExeption.cs" />
     <Compile Include="enum\EmployeerManager_Status.cs" />
@@ -101,11 +104,14 @@
     <Compile Include="Function.cs" />
     <Compile Include="Interface\IAnimal2.cs" />
     <Compile Include="Interface\IAnimal3.cs" />
+    <Compile Include="Interface\IProductMangement.cs" />
     <Compile Include="Manager\AninalManager.cs" />
     <Compile Include="Interface\IAnimal.cs" />
     <Compile Include="Manager\BirdManager.cs" />
     <Compile Include="Manager\CowManager.cs" />
+    <Compile Include="Manager\ProductMangement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestData\Product_GetListRequestData.cs" />
     <Compile Include="Struct\Bai6_DateTime.cs" />
     <Compile Include="Struct\Employeer.cs" />
   </ItemGroup>

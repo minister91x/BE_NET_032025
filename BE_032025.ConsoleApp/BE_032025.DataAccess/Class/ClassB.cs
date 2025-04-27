@@ -10,8 +10,8 @@ namespace BE_032025.DataAccess.Class
     {
         public void MethodB()
         {
-          var cLassA = new ClassA();
-            cLassA.MethodA();
+          //var cLassA = new ClassA();
+          //  cLassA.MethodA();
         }
     }
 }

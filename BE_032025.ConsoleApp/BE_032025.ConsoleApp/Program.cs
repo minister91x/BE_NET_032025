@@ -8,6 +8,8 @@ using System.Windows.Media;
 using System.Xml.Linq;
 using BE_032025.DataAccess;
 using BE_032025.DataAccess.Class;
+using BE_032025.DataAccess.Manager;
+using BE_032025.DataAccess.RequestData;
 using BE_032025.DataAccess.Struct;
 
 namespace BE_032025.ConsoleApp
@@ -431,61 +433,108 @@ namespace BE_032025.ConsoleApp
             //Console.WriteLine("Diện tích hình vuông: {0}", hinhvuong.TinhDienTich());
             //Console.WriteLine("Chu vi hình vuông: {0}", hinhvuong.TinhChuVi());
 
-            var person = new PersonClass();
-            // person.
-            Console.WriteLine("GetId: {0}", person.GetId());
-            Console.WriteLine("GetFullName: {0}", person.GetFullName());
+            //var person = new PersonClass();
+            //// person.
+            //Console.WriteLine("GetId: {0}", person.GetId());
+            //Console.WriteLine("GetFullName: {0}", person.GetFullName());
 
 
-            var maylenovo = new MayTinhLeNoVo();
-            maylenovo.ChieuDai = 10;
-            maylenovo.ChieuRong = 5;
+            //var maylenovo = new MayTinhLeNoVo();
+            //maylenovo.ChieuDai = 10;
+            //maylenovo.ChieuRong = 5;
 
-            maylenovo.UpRAM();
+            //maylenovo.UpRAM();
 
 
-            var maytinhDell = new MayTinhDell();
-            maytinhDell.ChieuDai = 20;
-            maytinhDell.ChieuRong = 10;
-            maytinhDell.UpRAM();
+            //var maytinhDell = new MayTinhDell();
+            //maytinhDell.ChieuDai = 20;
+            //maytinhDell.ChieuRong = 10;
+            //maytinhDell.UpRAM();
 
-            var myKey = System.Configuration.ConfigurationManager.AppSettings["MyKey"] ?? "";
+            //var myKey = System.Configuration.ConfigurationManager.AppSettings["MyKey"] ?? "";
 
-            if (string.IsNullOrEmpty(myKey))
+            //if (string.IsNullOrEmpty(myKey))
+            //{
+            //    return;
+            //}
+
+            //if (a == 10)
+            //{
+
+            //}
+
+            //var myKey2 = System.Configuration.ConfigurationManager.AppSettings["MyKey"] ?? "";
+
+
+
+
+            //if (a == 10)
+            //{
+
+            //}
+
+            //var emp = new Employeer_Partial();
+            //var inputData = new Employeer_GoToSleep_InputData
+            //{
+            //    chan = "chăn",
+            //    com = "cơm",
+            //    dem = "đêm",
+            //    denngu = "đèn ngủ",
+            //    dieuhoa = "điều hòa",
+            //    giuong = "giường",
+            //    goi = "gối",
+            //    dem2 = "đêm 2"
+            //};
+            //emp.GoToSLeep(inputData);
+
+            //emp.GoToSLeep(inputData);
+
+
+            var productManager = new ProductMangement();
+            var requestData = new Product_GetListRequestData
             {
-                return;
-            }
-
-            if (a == 10)
-            {
-
-            }
-
-            var myKey2 = System.Configuration.ConfigurationManager.AppSettings["MyKey"] ?? "";
-
-
-
-
-            if (a == 10)
-            {
-
-            }
-
-            var emp = new Employeer_Partial();
-            var inputData = new Employeer_GoToSleep_InputData
-            {
-                chan = "chăn",
-                com = "cơm",
-                dem = "đêm",
-                denngu = "đèn ngủ",
-                dieuhoa = "điều hòa",
-                giuong = "giường",
-                goi = "gối",
-                dem2 = "đêm 2"
+                ProductID = -1
             };
-            emp.GoToSLeep(inputData);
 
-            emp.GoToSLeep(inputData);
+            var list = productManager.Product_GetList(requestData);
+
+            if (list == null || list.Count < 0) { return; }
+
+            foreach (var item in list)
+            {
+                Console.WriteLine("----------------------------------------");
+                Console.WriteLine("| ProductID: {0}", item.ProductID + "\t | ProductName" + item.ProductName + "\t CategoryName |" + item.CategoryName);
+                Console.WriteLine("----------------------------------------");
+            }
+
+
+            var result = productManager.Product_Insert(new Product_InsertRequestData
+            {
+                ProductName = "Iphone 20 Pro Max",
+                CategoryID = 1,
+                ProductImage = "xxxxx"
+            });
+
+            if(result > 0)
+            {
+                Console.WriteLine("Thêm sản phẩm thành công!");
+            }
+            else
+            {
+                switch(result)
+                {
+                    case -1:
+                        Console.WriteLine("Thêm sản phẩm thất bại!");
+                        break;
+                    case -2:
+                        Console.WriteLine("Tên sản phẩm đã tồn tại!");
+                        break;
+                    default:
+                        Console.WriteLine("Lỗi không xác định!");
+                        break;
+                }
+            }
+
         }
 
     }
