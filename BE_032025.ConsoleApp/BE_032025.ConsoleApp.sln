@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BE_032025.Common", "BE_0320
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BE_032025.DataAccess", "BE_032025.DataAccess\BE_032025.DataAccess.csproj", "{5254D0C9-54B2-4F8C-8979-AF27A2CF507D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BE_032025.NetCoreAPI", "BE_032025.NetCoreAPI\BE_032025.NetCoreAPI.csproj", "{0294A57E-53AB-4533-A227-449CBBDC9980}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BE_032025.NetCoreWeb", "BE_032025.NetCoreWeb\BE_032025.NetCoreWeb.csproj", "{5B4BA9A5-9E49-466E-84A4-6A8962AE366E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{5254D0C9-54B2-4F8C-8979-AF27A2CF507D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5254D0C9-54B2-4F8C-8979-AF27A2CF507D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5254D0C9-54B2-4F8C-8979-AF27A2CF507D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0294A57E-53AB-4533-A227-449CBBDC9980}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0294A57E-53AB-4533-A227-449CBBDC9980}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0294A57E-53AB-4533-A227-449CBBDC9980}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0294A57E-53AB-4533-A227-449CBBDC9980}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B4BA9A5-9E49-466E-84A4-6A8962AE366E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B4BA9A5-9E49-466E-84A4-6A8962AE366E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B4BA9A5-9E49-466E-84A4-6A8962AE366E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B4BA9A5-9E49-466E-84A4-6A8962AE366E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
