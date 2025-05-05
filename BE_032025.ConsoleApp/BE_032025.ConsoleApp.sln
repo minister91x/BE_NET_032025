@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BE_032025.NetCoreAPI", "BE_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BE_032025.NetCoreWeb", "BE_032025.NetCoreWeb\BE_032025.NetCoreWeb.csproj", "{5B4BA9A5-9E49-466E-84A4-6A8962AE366E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BE_032025.DataAccessNetCore", "BE_032025.DataAccessNetCore\BE_032025.DataAccessNetCore.csproj", "{4F35A797-5930-46EC-AC5D-45830CE6FF92}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{5B4BA9A5-9E49-466E-84A4-6A8962AE366E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B4BA9A5-9E49-466E-84A4-6A8962AE366E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B4BA9A5-9E49-466E-84A4-6A8962AE366E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F35A797-5930-46EC-AC5D-45830CE6FF92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F35A797-5930-46EC-AC5D-45830CE6FF92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F35A797-5930-46EC-AC5D-45830CE6FF92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F35A797-5930-46EC-AC5D-45830CE6FF92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

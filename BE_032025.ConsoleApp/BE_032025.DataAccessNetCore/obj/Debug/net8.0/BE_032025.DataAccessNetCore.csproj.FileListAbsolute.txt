@@ -1,0 +1,12 @@
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.DataAccessNetCore\obj\Debug\net8.0\BE_032025.DataAccessNetCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.DataAccessNetCore\obj\Debug\net8.0\BE_032025.DataAccessNetCore.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.DataAccessNetCore\obj\Debug\net8.0\BE_032025.DataAccessNetCore.AssemblyInfo.cs
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.DataAccessNetCore\obj\Debug\net8.0\BE_032025.DataAccessNetCore.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.DataAccessNetCore\obj\Debug\net8.0\BE_032025.DataAccessNetCore.sourcelink.json
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.DataAccessNetCore\bin\Debug\net8.0\BE_032025.DataAccessNetCore.deps.json
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.DataAccessNetCore\bin\Debug\net8.0\BE_032025.DataAccessNetCore.dll
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.DataAccessNetCore\bin\Debug\net8.0\BE_032025.DataAccessNetCore.pdb
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.DataAccessNetCore\obj\Debug\net8.0\BE_032025.DataAccessNetCore.dll
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.DataAccessNetCore\obj\Debug\net8.0\refint\BE_032025.DataAccessNetCore.dll
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.DataAccessNetCore\obj\Debug\net8.0\BE_032025.DataAccessNetCore.pdb
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.DataAccessNetCore\obj\Debug\net8.0\ref\BE_032025.DataAccessNetCore.dll

@@ -10,4 +10,8 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BE_032025.DataAccessNetCore\BE_032025.DataAccessNetCore.csproj" />
+  </ItemGroup>
+
 </Project>

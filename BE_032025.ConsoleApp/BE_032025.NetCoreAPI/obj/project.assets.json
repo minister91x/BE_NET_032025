@@ -88,6 +88,16 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "BE_032025.DataAccessNetCore/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/BE_032025.DataAccessNetCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BE_032025.DataAccessNetCore.dll": {}
+        }
       }
     }
   },
@@ -439,10 +449,16 @@
         "swashbuckle.aspnetcore.swaggerui.6.6.2.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "BE_032025.DataAccessNetCore/1.0.0": {
+      "type": "project",
+      "path": "../BE_032025.DataAccessNetCore/BE_032025.DataAccessNetCore.csproj",
+      "msbuildProject": "../BE_032025.DataAccessNetCore/BE_032025.DataAccessNetCore.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "BE_032025.DataAccessNetCore >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.6.2"
     ]
   },
@@ -477,7 +493,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Admin\\source\\repos\\BE_032025\\BE_032025.ConsoleApp\\BE_032025.DataAccessNetCore\\BE_032025.DataAccessNetCore.csproj": {
+              "projectPath": "C:\\Users\\Admin\\source\\repos\\BE_032025\\BE_032025.ConsoleApp\\BE_032025.DataAccessNetCore\\BE_032025.DataAccessNetCore.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

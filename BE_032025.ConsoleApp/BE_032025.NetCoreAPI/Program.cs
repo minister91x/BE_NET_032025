@@ -1,3 +1,5 @@
+using BE_032025.DataAccessNetCore.IServices;
+using BE_032025.DataAccessNetCore.Services;
 using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +10,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<IProductServices, ProductServices>();
 
 var app = builder.Build();
 
