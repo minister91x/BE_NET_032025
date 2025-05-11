@@ -11,6 +11,8 @@ namespace BE_032025.DataAccessNetCore.IServices
     public interface IProductServices
     {
         Task<List<ProductDTO>> Product_GetList(Product_GetListRequestData requestData);
-        Task<int> Product_Insert(Product_InsertRequestData requestData);
+
+        Task<List<Product>> Product_GetList_EfCore(Product_GetListRequestData requestData);
+        Task<ReturnData> Product_Insert(Product_InsertRequestData requestData);
     }
 }

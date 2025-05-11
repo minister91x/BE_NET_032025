@@ -1,10 +1,14 @@
+using BE_032025.DataAccessNetCore.Dbcontext;
 using BE_032025.DataAccessNetCore.IServices;
 using BE_032025.DataAccessNetCore.Services;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
-
+var configuration = builder.Configuration;
 // Add services to the container.
+builder.Services.AddDbContext<BE_032025DbContext>(options =>
+               options.UseSqlServer(configuration.GetConnectionString("ConnStrBE032025")));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

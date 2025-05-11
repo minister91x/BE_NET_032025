@@ -1,0 +1,12 @@
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.CommonNetcore\bin\Debug\net8.0\BE_032025.CommonNetcore.deps.json
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.CommonNetcore\bin\Debug\net8.0\BE_032025.CommonNetcore.dll
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.CommonNetcore\bin\Debug\net8.0\BE_032025.CommonNetcore.pdb
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.CommonNetcore\obj\Debug\net8.0\BE_032025.CommonNetcore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.CommonNetcore\obj\Debug\net8.0\BE_032025.CommonNetcore.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.CommonNetcore\obj\Debug\net8.0\BE_032025.CommonNetcore.AssemblyInfo.cs
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.CommonNetcore\obj\Debug\net8.0\BE_032025.CommonNetcore.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.CommonNetcore\obj\Debug\net8.0\BE_032025.CommonNetcore.sourcelink.json
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.CommonNetcore\obj\Debug\net8.0\BE_032025.CommonNetcore.dll
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.CommonNetcore\obj\Debug\net8.0\refint\BE_032025.CommonNetcore.dll
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.CommonNetcore\obj\Debug\net8.0\BE_032025.CommonNetcore.pdb
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.CommonNetcore\obj\Debug\net8.0\ref\BE_032025.CommonNetcore.dll

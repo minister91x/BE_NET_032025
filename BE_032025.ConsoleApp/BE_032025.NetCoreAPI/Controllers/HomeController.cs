@@ -21,7 +21,23 @@ namespace BE_032025.NetCoreAPI.Controllers
         {
             try
             {
-                var list = await _productServices.Product_GetList(requestData);
+                var list = await _productServices.Product_GetList_EfCore(requestData);
+                return Ok(list);
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+        }
+
+
+        [HttpPost("Product_Insert")]
+        public async Task<IActionResult> Product_Insert(Product_InsertRequestData requestData)
+        {
+            try
+            {
+                var list = await _productServices.Product_Insert(requestData);
                 return Ok(list);
             }
             catch (Exception ex)
