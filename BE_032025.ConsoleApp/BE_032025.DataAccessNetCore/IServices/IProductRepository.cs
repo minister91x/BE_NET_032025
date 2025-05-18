@@ -8,7 +8,7 @@ using BE_032025.DataAccessNetCore.RequestData;
 
 namespace BE_032025.DataAccessNetCore.IServices
 {
-    public interface IProductServices
+    public interface IProductRepository
     {
         Task<List<ProductDTO>> Product_GetList(Product_GetListRequestData requestData);
 

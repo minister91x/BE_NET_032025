@@ -15,5 +15,6 @@ namespace BE_032025.DataAccessNetCore.Dbcontext
         }
         protected override void OnModelCreating(ModelBuilder builder) { base.OnModelCreating(builder); }
         public virtual DbSet<Product> product { get; set; }
+        public virtual DbSet<Category> category { get; set; }
     }
 }

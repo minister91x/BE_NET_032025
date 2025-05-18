@@ -1,6 +1,7 @@
 using BE_032025.DataAccessNetCore.Dbcontext;
 using BE_032025.DataAccessNetCore.IServices;
 using BE_032025.DataAccessNetCore.Services;
+using BE_032025.DataAccessNetCore.UnitOfWork;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 
@@ -14,8 +15,10 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddScoped<IProductServices, ProductServices>();
-
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IProductGenericRepository, ProductGenericRepository>();
+builder.Services.AddScoped<ICategoryGenericRepository, CategoryGenericRepository>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 var app = builder.Build();
 
 //app.UseExceptionHandler();

@@ -11,10 +11,10 @@ using BE_032025.DataAccessNetCore.RequestData;
 
 namespace BE_032025.DataAccessNetCore.Services
 {
-    public class ProductServices : IProductServices
+    public class ProductRepository : IProductRepository
     {
         private readonly BE_032025DbContext _dbContext;
-        public ProductServices(BE_032025DbContext dbContext)
+        public ProductRepository(BE_032025DbContext dbContext)
         {
             _dbContext = dbContext;
         }
