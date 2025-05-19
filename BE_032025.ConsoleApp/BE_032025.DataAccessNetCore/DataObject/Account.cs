@@ -6,19 +6,15 @@ using System.Threading.Tasks;
 
 namespace BE_032025.DataAccessNetCore.DataObject
 {
-    public class ReturnData
-    {
-        public int ResponseCode { get; set; }
-        public string? ResponseMessage { get; set; }
-    }
-
-    public class AccountLoginResponse : ReturnData
+    public class Account
     {
         public int AccountID { get; set; }
         public string? UserName { get; set; }
+        public string? Password { get; set; }
+        public string? Address { get; set; }
         public string? FullName { get; set; }
-        public string? token { get; set; }
-
-        public string? resfeshToken { get; set; }
+        public int IsAdmin { get; set; }
+        public string? RefreshToken { get; set; } = string.Empty;
+        public DateTime? ExpriredTime { get; set; } 
     }
 }

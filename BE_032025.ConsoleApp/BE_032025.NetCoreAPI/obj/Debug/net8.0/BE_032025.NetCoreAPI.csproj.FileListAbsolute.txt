@@ -85,3 +85,4 @@ C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.NetCoreAPI\
 C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.NetCoreAPI\obj\Debug\net8.0\BE_032025.NetCoreAPI.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.NetCoreAPI\bin\Debug\net8.0\BE_032025.CommonNetcore.dll
 C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.NetCoreAPI\bin\Debug\net8.0\BE_032025.CommonNetcore.pdb
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.NetCoreAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

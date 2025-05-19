@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "BE_032025.NetCoreAPI.Controllers.AuthenController",
+    "Method": "Login",
+    "RelativePath": "api/Authen/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "requestData",
+        "Type": "BE_032025.DataAccessNetCore.DataObject.AccountLoginRequestData",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "BE_032025.NetCoreAPI.Controllers.HomeController",
     "Method": "Product_GetList",
     "RelativePath": "api/Home/Product_GetList",
