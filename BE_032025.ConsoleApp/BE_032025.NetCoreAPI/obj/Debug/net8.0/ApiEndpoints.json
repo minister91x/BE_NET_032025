@@ -16,6 +16,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "BE_032025.NetCoreAPI.Controllers.AuthenController",
+    "Method": "RefreshToken",
+    "RelativePath": "api/Authen/refresh-token",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tokenModel",
+        "Type": "BE_032025.DataAccessNetCore.DataObject.TokenModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "BE_032025.NetCoreAPI.Controllers.HomeController",
     "Method": "Product_GetList",
     "RelativePath": "api/Home/Product_GetList",

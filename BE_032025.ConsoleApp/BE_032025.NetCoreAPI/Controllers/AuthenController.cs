@@ -52,7 +52,9 @@ namespace BE_032025.NetCoreAPI.Controllers
                 // Bước 2 : tạo token   
                 var authClaims = new List<Claim> {
                     new Claim(ClaimTypes.Name, account.UserName),
-                    new Claim(ClaimTypes.PrimarySid, account.AccountID.ToString()) };
+                    new Claim(ClaimTypes.PrimarySid, account.AccountID.ToString()),
+                    new Claim(ClaimTypes.IsPersistent, account.IsAdmin.ToString())
+                };
 
 
                 var tokenNew = CreateToken(authClaims);

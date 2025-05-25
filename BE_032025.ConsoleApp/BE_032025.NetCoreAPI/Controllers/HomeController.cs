@@ -27,6 +27,15 @@ namespace BE_032025.NetCoreAPI.Controllers
         }
 
         [HttpPost("Product_GetList")]
+        // Filter -> Claims 
+        // Bươc 1: Tạo Filter (Attributes)
+        // Bước 2 Impliment Interface IAuthorization trong Attributes
+        // Bước 3: Đọc Identity Trong hàm override của IAuthorization
+        // Bước 4 :Đọc Claims trong identity
+        [BE_032025.NetCoreAPI.Filter.BE_032025_Authorize("Product_GetList", "ISVIEWS")]
+
+        // Chức năng 
+        // UserId 
         public async Task<IActionResult> Product_GetList(Product_GetListRequestData requestData)
         {
             try

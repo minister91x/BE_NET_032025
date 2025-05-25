@@ -53,8 +53,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 //app.UseMiddleware<BE_032025.NetCoreAPI.MiddleWare.MyMiddleware>();
-app.UseAuthentication();
-app.UseAuthorization();
+//app.UseAuthentication();
+//app.UseAuthorization();
 
 app.MapControllers();
 app.UseStaticFiles(new StaticFileOptions
