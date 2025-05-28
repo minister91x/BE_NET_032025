@@ -86,3 +86,7 @@ C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.NetCoreAPI\
 C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.NetCoreAPI\bin\Debug\net8.0\BE_032025.CommonNetcore.dll
 C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.NetCoreAPI\bin\Debug\net8.0\BE_032025.CommonNetcore.pdb
 C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.NetCoreAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.NetCoreAPI\bin\Debug\net8.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.NetCoreAPI\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.NetCoreAPI\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
+C:\Users\Admin\source\repos\BE_032025\BE_032025.ConsoleApp\BE_032025.NetCoreAPI\bin\Debug\net8.0\StackExchange.Redis.dll

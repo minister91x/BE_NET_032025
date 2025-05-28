@@ -5,6 +5,8 @@ using BE_032025.DataAccessNetCore.RequestData;
 using BE_032025.DataAccessNetCore.UnitOfWork;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Distributed;
+using Newtonsoft.Json;
 
 namespace BE_032025.NetCoreAPI.Controllers
 {
@@ -21,9 +23,11 @@ namespace BE_032025.NetCoreAPI.Controllers
         //}
 
         private readonly IUnitOfWork _unitOfWork;
-        public HomeController(IUnitOfWork unitOfWork)
+        private readonly IDistributedCache _cache;
+        public HomeController(IUnitOfWork unitOfWork, IDistributedCache cache)
         {
             _unitOfWork = unitOfWork;
+            _cache = cache;
         }
 
         [HttpPost("Product_GetList")]
@@ -42,19 +46,41 @@ namespace BE_032025.NetCoreAPI.Controllers
             {
                 // var list = await _productServices.Product_GetList_EfCore(requestData);
 
-                var stopwatch = new Stopwatch();
-                stopwatch.Start();
+                //var stopwatch = new Stopwatch();
+                //stopwatch.Start();
+                //  var list = await _unitOfWork.ProductGenericRepository.GetList(requestData);
+                //stopwatch.Stop();
+                //Console.WriteLine($"AsNoTracking: {stopwatch.ElapsedMilliseconds} ms");
+
+
+                //var stopwatch2 = new Stopwatch();
+                //var list_NoTracking = await _unitOfWork.ProductGenericRepository.GetList_NoATracking(requestData);
+
+                //stopwatch2.Stop();
+                //Console.WriteLine($"Tracking: {stopwatch2.ElapsedMilliseconds} ms");
+
+                // Bước 1: Kiểm tra dữ liệu trong cache
+
+                //nêu dữ liệu đã có trong cache thì trả về dữ liệu từ cache
+                var keyCache = "Product_GetList";
+                var cachedData = await _cache.GetStringAsync(keyCache);
+                if (!string.IsNullOrEmpty(cachedData))
+                {
+                    // Chuyển đổi dữ liệu từ JSON về List<Product>
+                    var cachedList = JsonConvert.DeserializeObject<List<Product>>(cachedData);
+                    return Ok(cachedList);
+                }
+
+                // nếu dữ liệu không có trong cache thì truy vấn từ DB và lưu vào cache
+                // đi vào database để lấy 
                 var list = await _unitOfWork.ProductGenericRepository.GetList(requestData);
-                stopwatch.Stop();
-                Console.WriteLine($"AsNoTracking: {stopwatch.ElapsedMilliseconds} ms");
+                // lưu dữ liệu vào cache
+                var cacheOptions = new DistributedCacheEntryOptions
+                {
+                    AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(1) // Thời gian hết hạn cache
+                };
 
-
-                var stopwatch2 = new Stopwatch();
-                var list_NoTracking = await _unitOfWork.ProductGenericRepository.GetList_NoATracking(requestData);
-
-                stopwatch2.Stop();
-                Console.WriteLine($"Tracking: {stopwatch2.ElapsedMilliseconds} ms");
-
+                await _cache.SetStringAsync(keyCache, JsonConvert.SerializeObject(list), cacheOptions);
 
                 return Ok(list);
             }

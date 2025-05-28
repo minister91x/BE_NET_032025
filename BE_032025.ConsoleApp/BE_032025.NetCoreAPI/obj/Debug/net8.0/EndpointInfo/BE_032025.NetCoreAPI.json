@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "BE_032025.NetCoreAPI",
-    "version": "1.0"
+    "title": "BE03_2025 API",
+    "version": "v1"
   },
   "paths": {
     "/api/Authen/Login": {
@@ -181,6 +181,10 @@
           "password": {
             "type": "string",
             "nullable": true
+          },
+          "deviceID": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -250,6 +254,19 @@
         },
         "additionalProperties": false
       }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "http",
+        "description": "Please enter token",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
     }
-  }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
 }

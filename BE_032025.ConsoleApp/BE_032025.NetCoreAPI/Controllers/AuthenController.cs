@@ -1,4 +1,5 @@
-﻿using System.IdentityModel.Tokens.Jwt;
+﻿using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
@@ -8,7 +9,9 @@ using BE_032025.DataAccessNetCore.IServices;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.IdentityModel.Tokens;
+using Newtonsoft.Json;
 
 namespace BE_032025.NetCoreAPI.Controllers
 {
@@ -18,10 +21,13 @@ namespace BE_032025.NetCoreAPI.Controllers
     {
         private readonly IAcccountRepository _acccountRepository;
         private readonly IConfiguration _configuration;
-        public AuthenController(IAcccountRepository acccountRepository, IConfiguration configuration)
+        private readonly IDistributedCache _cache;
+        public AuthenController(IAcccountRepository acccountRepository,
+            IConfiguration configuration, IDistributedCache cache)
         {
             _acccountRepository = acccountRepository;
             _configuration = configuration;
+            _cache = cache;
         }
 
         [HttpPost("Login")]
@@ -75,6 +81,24 @@ namespace BE_032025.NetCoreAPI.Controllers
                     ResfeshToken = resfeshToken,
                     ExpriedTime = expiredRefreshToken
                 });
+
+
+                // Lưu token vào Redis . Với thời gian sống = thời hạn của token
+                var userSession = new BE_032025.DataAccess.DataObject.User_Sessions
+                {
+                    AccountID = account.AccountID,
+                    Token = token,
+                    ExpriredTime = tokenNew.ValidFrom,
+                    DeviceID = requestData.DeviceID,
+                };
+
+                var keyCache = $"User_Session_" + account.AccountID + "_" + requestData.DeviceID;
+                var cacheOptions = new DistributedCacheEntryOptions
+                {
+                    AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(1) // Thời gian hết hạn cache
+                };
+
+                await _cache.SetStringAsync(keyCache, JsonConvert.SerializeObject(userSession), cacheOptions);
 
 
                 // bước 3 trả về token 
