@@ -100,6 +100,7 @@ namespace BE_032025.NetCoreAPI.Controllers
 
                 await _cache.SetStringAsync(keyCache, JsonConvert.SerializeObject(userSession), cacheOptions);
 
+              
 
                 // bước 3 trả về token 
                 returnData.ResponseCode = (int)AccountManager_Status.ACCOUNT_INSERT_SUCCESS;
@@ -167,6 +168,8 @@ namespace BE_032025.NetCoreAPI.Controllers
                 ResfeshToken = newRefreshToken
             });
 
+
+            // xóa cache của token cũ đi 
 
             return new ObjectResult(new
             {

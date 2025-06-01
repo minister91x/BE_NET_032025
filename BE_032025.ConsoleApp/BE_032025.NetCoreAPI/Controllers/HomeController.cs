@@ -118,8 +118,8 @@ namespace BE_032025.NetCoreAPI.Controllers
                 }
 
 
-                var rs_product = await _unitOfWork.ProductGenericRepository.Insert(
-                    new Product
+                var rs_product = await _unitOfWork.ProductRepositoryDapper.Product_Insert(
+                    new Product_InsertRequestData
                     {
                         ProductName = requestData.ProductName,
                         ProductImage = requestData.ProductImage,
@@ -133,7 +133,7 @@ namespace BE_032025.NetCoreAPI.Controllers
                     });
 
 
-                await Task.Delay(300000);
+                ///  await Task.Delay(300000);
 
                 _unitOfWork.SaveChange();
 
@@ -141,7 +141,7 @@ namespace BE_032025.NetCoreAPI.Controllers
                 // var list = await _unitOfWork.ProductGenericRepository.Insert(requestData);
                 // return Ok(list);
 
-                return Ok();
+                return Ok(rs_product);
             }
             catch (Exception ex)
             {

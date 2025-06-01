@@ -15,12 +15,16 @@ namespace BE_032025.DataAccessNetCore.UnitOfWork
         public IProductGenericRepository ProductGenericRepository { get; set; }
 
         public BE_032025DbContext _dbContext { get; set; }
+
+        public IProductRepositoryDapper ProductRepositoryDapper { get; set; }
+
         public UnitOfWork(ICategoryGenericRepository categoryGenericRepository,
-            IProductGenericRepository productGenericRepository , BE_032025DbContext dbContext)
+            IProductGenericRepository productGenericRepository , BE_032025DbContext dbContext, IProductRepositoryDapper productRepositoryDapper)
         {
             CategoryRepository = categoryGenericRepository;
             ProductGenericRepository = productGenericRepository;
             _dbContext = dbContext;
+            ProductRepositoryDapper = productRepositoryDapper;
         }
 
         public void SaveChange()

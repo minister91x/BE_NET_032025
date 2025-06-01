@@ -11,6 +11,8 @@ namespace BE_032025.DataAccessNetCore.UnitOfWork
     {
         ICategoryGenericRepository CategoryRepository { get; }
         IProductGenericRepository ProductGenericRepository { get; }
+
+        IProductRepositoryDapper ProductRepositoryDapper { get; }
       
         void SaveChange();
         void Dispose();

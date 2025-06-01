@@ -1,4 +1,5 @@
 using System.Text;
+using BE_032025.DataAccessNetCore.Dapper;
 using BE_032025.DataAccessNetCore.Dbcontext;
 using BE_032025.DataAccessNetCore.IServices;
 using BE_032025.DataAccessNetCore.Services;
@@ -73,6 +74,10 @@ builder.Services.AddSwaggerGen(opt =>
         }
     });
 });
+
+builder.Services.AddScoped<IApplicationDbConnection, ApplicationDbConnection>();
+builder.Services.AddScoped<IProductRepositoryDapper, ProductRepositoryDapper>();
+
 var app = builder.Build();
 
 //app.UseExceptionHandler();
