@@ -3,6 +3,7 @@ using BE_032025.DataAccessNetCore.DataObject;
 using BE_032025.DataAccessNetCore.IServices;
 using BE_032025.DataAccessNetCore.RequestData;
 using BE_032025.DataAccessNetCore.UnitOfWork;
+using BE_032025.NetCoreAPI.NLogManager;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Distributed;
@@ -21,13 +22,18 @@ namespace BE_032025.NetCoreAPI.Controllers
         //  _productServices = productServices;
         //    _productGenericServices = productGenericServices;
         //}
+        private readonly ILogger<HomeController> _logger;
+        private readonly ILoggerManager _loggerManager;
 
         private readonly IUnitOfWork _unitOfWork;
         private readonly IDistributedCache _cache;
-        public HomeController(IUnitOfWork unitOfWork, IDistributedCache cache)
+        public HomeController(IUnitOfWork unitOfWork, IDistributedCache cache,
+            ILogger<HomeController> logger, ILoggerManager loggerManager)
         {
             _unitOfWork = unitOfWork;
             _cache = cache;
+            _logger = logger;
+            _loggerManager = loggerManager;
         }
 
         [HttpPost("Product_GetList")]
@@ -44,6 +50,12 @@ namespace BE_032025.NetCoreAPI.Controllers
         {
             try
             {
+
+                var UserID = AccountInfor.AccountID;
+
+
+                _loggerManager.LogInfo("Product_GetList requestData: " + JsonConvert.SerializeObject(requestData));
+
                 // var list = await _productServices.Product_GetList_EfCore(requestData);
 
                 //var stopwatch = new Stopwatch();
@@ -68,6 +80,7 @@ namespace BE_032025.NetCoreAPI.Controllers
                 {
                     // Chuyển đổi dữ liệu từ JSON về List<Product>
                     var cachedList = JsonConvert.DeserializeObject<List<Product>>(cachedData);
+                    _loggerManager.LogInfo("Product_GetList Response :" + JsonConvert.SerializeObject(cachedList));
                     return Ok(cachedList);
                 }
 
@@ -82,18 +95,21 @@ namespace BE_032025.NetCoreAPI.Controllers
 
                 await _cache.SetStringAsync(keyCache, JsonConvert.SerializeObject(list), cacheOptions);
 
+                // _logger.LogInformation("Dữ liệu đã được lưu vào cache với key: {Key}", keyCache +" |Data:"+ JsonConvert.SerializeObject(list));
+                _loggerManager.LogInfo("Product_GetList Response :" + JsonConvert.SerializeObject(list));
+
                 return Ok(list);
             }
             catch (Exception ex)
             {
-
-                throw;
+                _loggerManager.LogError("ex Message:"+ ex.Message + " | StackTrace: " + ex.StackTrace);
+                throw ex; // Ném lại ngoại lệ để xử lý ở nơi khác nếu cần
             }
         }
 
 
         [HttpPost("Product_Insert")]
-        public async Task<IActionResult> Product_Insert(Product_InsertRequestData requestData)
+        public async Task<IActionResult> Product_Insert([FromBody] Product_InsertRequestData requestData)
         {
             try
             {

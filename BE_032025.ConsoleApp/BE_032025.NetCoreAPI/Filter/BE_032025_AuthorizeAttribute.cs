@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using System.Security;
 using System.Security.Claims;
+using BE_032025.DataAccessNetCore.DataObject;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
@@ -44,6 +45,8 @@ namespace BE_032025.NetCoreAPI.Filter
             var UserID = Convert.ToInt32(userClaims.FirstOrDefault(x => x.Type == ClaimTypes.PrimarySid)?.Value);
             var IsAdmin = Convert.ToInt32(userClaims.FirstOrDefault(x => x.Type == ClaimTypes.IsPersistent)?.Value);
 
+
+            AccountInfor.AccountID= UserID;
             // Checkpermission 
             // Gọi DB 
             // bước 1 : Từ _functionCode => FUNCTIONID 

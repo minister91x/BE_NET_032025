@@ -4,12 +4,14 @@ using BE_032025.DataAccessNetCore.Dbcontext;
 using BE_032025.DataAccessNetCore.IServices;
 using BE_032025.DataAccessNetCore.Services;
 using BE_032025.DataAccessNetCore.UnitOfWork;
+using BE_032025.NetCoreAPI.NLogManager;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using NLog;
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
@@ -17,6 +19,8 @@ var configuration = builder.Configuration;
 builder.Services.AddDbContext<BE_032025DbContext>(options =>
                options.UseSqlServer(configuration.GetConnectionString("ConnStrBE032025")));
 builder.Services.AddStackExchangeRedisCache(options => { options.Configuration = configuration["RedisCacheUrl"]; });
+
+LogManager.LoadConfiguration(string.Concat(Directory.GetCurrentDirectory(), "/NLog.config"));
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
 {
@@ -41,6 +45,7 @@ builder.Services.AddScoped<IProductGenericRepository, ProductGenericRepository>(
 builder.Services.AddScoped<ICategoryGenericRepository, CategoryGenericRepository>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IAcccountRepository, AcccountRepository>();
+builder.Services.AddSingleton<ILoggerManager, LoggerManager>();
 
 builder.Services.Configure<ForwardedHeadersOptions>(options =>
 {
@@ -77,6 +82,9 @@ builder.Services.AddSwaggerGen(opt =>
 
 builder.Services.AddScoped<IApplicationDbConnection, ApplicationDbConnection>();
 builder.Services.AddScoped<IProductRepositoryDapper, ProductRepositoryDapper>();
+builder.Logging.ClearProviders();
+builder.Logging.AddConsole();
+
 
 var app = builder.Build();
 
