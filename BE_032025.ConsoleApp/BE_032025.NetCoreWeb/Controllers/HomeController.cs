@@ -1,4 +1,4 @@
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using BE_032025.NetCoreWeb.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,13 +13,35 @@ namespace BE_032025.NetCoreWeb.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int? id)
         {
-            return View();
+            var list = new List<ProductDemoModels>();
+            try
+            {
+                // Nó sẽ đi tìm trong thư mục Views sẽ đi tiếp thư mục có tên trùng với tên của controller 
+                // đi tìm thư mục home trong thư mục views / Views/Home 
+                // và tìm file có tên trùng với tên của ActionResult => là Index.cshtml
+                
+                list.Add(new ProductDemoModels
+                {
+                    Id = 1,
+                    Name = "Iphone 14 Pro Max",
+                    Image = "https://cdn.tgdd.vn/Products/Images/42/289663/Kit/iphone-14-note-new-1.jpg"
+                });
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return View(list);
         }
 
         public IActionResult Privacy()
         {
+            //return RedirectToAction("About");
+
             return View();
         }
 
