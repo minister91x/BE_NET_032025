@@ -38,6 +38,8 @@ namespace BE_032025.NetCoreWeb.Controllers
             return View(list);
         }
 
+
+       
         public IActionResult Privacy()
         {
             //return RedirectToAction("About");

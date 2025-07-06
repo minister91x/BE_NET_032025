@@ -1,0 +1,85 @@
+﻿@{
+	var notice = ViewBag.Notice;
+}
+<p style="color:red">@notice</p>
+<h3>Dùng FORM</h3>
+<form asp-action="Login" method="post">
+	<div class="form-group">
+		<label for="email">Email address:</label>
+		<input type="email" class="form-control" id="email" name="email">
+	</div>
+	<div class="form-group">
+		<label for="pwd">Password:</label>
+		<input type="password" class="form-control" id="password" name="password">
+	</div>
+	<button type="submit" class="btn btn-success">Login</button>
+</form>
+
+<h3>Dùng AJAX</h3>
+
+
+<div class="form-group">
+	<label for="email">Email address:</label>
+	<input type="email" class="form-control" id="email_ajax" name="email">
+</div>
+<div class="form-group">
+	<label for="pwd">Password:</label>
+	<input type="password" class="form-control" id="password_ajax" name="password">
+</div>
+<button type="button" id="btnLogin" class="btn btn-success">Đăng nhập</button>
+
+@section Scripts {
+
+	<script>
+			$(document).ready(function(){
+				$("#btnLogin").click(function(){
+					Login();
+				});
+			});
+
+			function Login(){
+				//alert("bạn đã bấm Login");
+				var email = $("#email_ajax").val();
+
+				if(email == null || email == ""){
+					alert("Email không được để trống");
+					return;
+				}
+				if(email.length < 5){
+					alert("Email phải có ít nhất 5 ký tự");
+					return;
+				}
+
+				if(email.length > 50){
+						alert("Email không được quá 50 ký tự");
+						return;
+					}
+			var pwd = $("#password_ajax").val();
+			var inputData={
+				email:email,
+				password:pwd
+			};
+
+		$.ajax({
+		  url: "/Account/Login_AJAX", // The URL to which the request is sent
+		  data: JSON.stringify(inputData),
+		  method: "POST", // The HTTP request method (e.g., GET, POST)
+		  contentType: 'application/json',
+		  dataType: "json", // The type of data expected back from the server (e.g., "text", "json")
+		  success: function(response){
+			// This function is executed if the request is successful
+			 alert(response.message);
+
+			 console.log(JSON.stringify(response));
+		  },
+		  error: function(xhr, status, error){
+			// This function is executed if an error occurs during the request
+			console.error("Error fetching data:", error);
+		  }
+		});
+
+		}
+
+	</script>
+
+}

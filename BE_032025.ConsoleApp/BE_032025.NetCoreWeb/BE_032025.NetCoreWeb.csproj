@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BE_032025.CommonNetcore\BE_032025.CommonNetcore.csproj" />
     <ProjectReference Include="..\BE_032025.DataAccessNetCore\BE_032025.DataAccessNetCore.csproj" />
   </ItemGroup>
 

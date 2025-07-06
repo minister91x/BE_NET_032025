@@ -200,6 +200,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "C:\\Users\\Admin\\source\\repos\\BE_032025\\BE_032025.ConsoleApp\\BE_032025.CommonNetcore\\BE_032025.CommonNetcore.csproj": {
+                "projectPath": "C:\\Users\\Admin\\source\\repos\\BE_032025\\BE_032025.ConsoleApp\\BE_032025.CommonNetcore\\BE_032025.CommonNetcore.csproj"
+              },
               "C:\\Users\\Admin\\source\\repos\\BE_032025\\BE_032025.ConsoleApp\\BE_032025.DataAccessNetCore\\BE_032025.DataAccessNetCore.csproj": {
                 "projectPath": "C:\\Users\\Admin\\source\\repos\\BE_032025\\BE_032025.ConsoleApp\\BE_032025.DataAccessNetCore\\BE_032025.DataAccessNetCore.csproj"
               }
