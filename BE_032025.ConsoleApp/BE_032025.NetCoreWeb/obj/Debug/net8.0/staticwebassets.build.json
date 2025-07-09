@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "I3S1DtM8wdr25NKeFIpIpy2p2RdlNaUTzOAdPBnjbqE=",
+  "Hash": "cqxZPLBwHF69m105uMprHi71UuEUypU01/JrIVLBrhU=",
   "Source": "BE_032025.NetCoreWeb",
   "BasePath": "_content/BE_032025.NetCoreWeb",
   "Mode": "Default",
@@ -99,6 +99,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\source\\repos\\BE_032025\\BE_032025.ConsoleApp\\BE_032025.NetCoreWeb\\wwwroot\\js\\Common.js",
+      "SourceId": "BE_032025.NetCoreWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\BE_032025\\BE_032025.ConsoleApp\\BE_032025.NetCoreWeb\\wwwroot\\",
+      "BasePath": "_content/BE_032025.NetCoreWeb",
+      "RelativePath": "js/Common#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "aqx9uuk42u",
+      "Integrity": "Aml3Xv6q6q1i/wgZ6CPvr3OwqqAPgyytlivaMCaekw4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Common.js"
     },
     {
       "Identity": "C:\\Users\\Admin\\source\\repos\\BE_032025\\BE_032025.ConsoleApp\\BE_032025.NetCoreWeb\\wwwroot\\js\\site.js",
@@ -1645,6 +1666,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
+        }
+      ]
+    },
+    {
+      "Route": "js/Common.aqx9uuk42u.js",
+      "AssetFile": "C:\\Users\\Admin\\source\\repos\\BE_032025\\BE_032025.ConsoleApp\\BE_032025.NetCoreWeb\\wwwroot\\js\\Common.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "811"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Aml3Xv6q6q1i/wgZ6CPvr3OwqqAPgyytlivaMCaekw4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Jul 2025 13:48:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "aqx9uuk42u"
+        },
+        {
+          "Name": "label",
+          "Value": "js/Common.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Aml3Xv6q6q1i/wgZ6CPvr3OwqqAPgyytlivaMCaekw4="
+        }
+      ]
+    },
+    {
+      "Route": "js/Common.js",
+      "AssetFile": "C:\\Users\\Admin\\source\\repos\\BE_032025\\BE_032025.ConsoleApp\\BE_032025.NetCoreWeb\\wwwroot\\js\\Common.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "811"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Aml3Xv6q6q1i/wgZ6CPvr3OwqqAPgyytlivaMCaekw4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Jul 2025 13:48:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Aml3Xv6q6q1i/wgZ6CPvr3OwqqAPgyytlivaMCaekw4="
         }
       ]
     },

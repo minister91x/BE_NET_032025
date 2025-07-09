@@ -2,29 +2,29 @@
 	var notice = ViewBag.Notice;
 }
 <p style="color:red">@notice</p>
-<h3>Dùng FORM</h3>
+@* <h3>Dùng FORM</h3>
 <form asp-action="Login" method="post">
 	<div class="form-group">
-		<label for="email">Email address:</label>
-		<input type="email" class="form-control" id="email" name="email">
+		<label for="email">UserName:</label>
+		<input type="email" class="form-control" id="UserName" name="UserName">
 	</div>
 	<div class="form-group">
 		<label for="pwd">Password:</label>
-		<input type="password" class="form-control" id="password" name="password">
+		<input type="password" class="form-control" id="Password" name="Password">
 	</div>
 	<button type="submit" class="btn btn-success">Login</button>
-</form>
+</form> *@
 
 <h3>Dùng AJAX</h3>
 
 
 <div class="form-group">
-	<label for="email">Email address:</label>
-	<input type="email" class="form-control" id="email_ajax" name="email">
+	<label for="email">UserName:</label>
+	<input type="email" class="form-control" id="UserName" name="UserName">
 </div>
 <div class="form-group">
 	<label for="pwd">Password:</label>
-	<input type="password" class="form-control" id="password_ajax" name="password">
+	<input type="password" class="form-control" id="Password" name="Password">
 </div>
 <button type="button" id="btnLogin" class="btn btn-success">Đăng nhập</button>
 
@@ -39,7 +39,7 @@
 
 			function Login(){
 				//alert("bạn đã bấm Login");
-				var email = $("#email_ajax").val();
+				var email = $("#UserName").val();
 
 				if(email == null || email == ""){
 					alert("Email không được để trống");
@@ -54,10 +54,10 @@
 						alert("Email không được quá 50 ký tự");
 						return;
 					}
-			var pwd = $("#password_ajax").val();
+			var pwd = $("#Password").val();
 			var inputData={
-				email:email,
-				password:pwd
+				UserName:email,
+				Password:pwd
 			};
 
 		$.ajax({
@@ -68,9 +68,13 @@
 		  dataType: "json", // The type of data expected back from the server (e.g., "text", "json")
 		  success: function(response){
 			// This function is executed if the request is successful
-			 alert(response.message);
+			 alert(response.token);
 
 			 console.log(JSON.stringify(response));
+
+			 // set cookies
+
+			 CommonCtrl.setCookie("BE_032025_Token", response.token, 1); // Set token cookie for 1 day
 		  },
 		  error: function(xhr, status, error){
 			// This function is executed if an error occurs during the request
@@ -78,7 +82,7 @@
 		  }
 		});
 
-		}
+		};
 
 	</script>
 

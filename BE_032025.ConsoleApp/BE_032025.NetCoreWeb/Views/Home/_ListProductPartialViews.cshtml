@@ -1,0 +1,30 @@
+﻿@model List<BE_032025.NetCoreWeb.Models.Product>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>IMage</th>
+			<th>Category</th>
+		</tr>
+	</thead>
+	<tbody>
+		@if (Model != null && Model.Count > 0)
+		{
+			foreach (var item in Model)
+			{
+				<tr>
+					<td>@item.ProductID</td>
+					<td>@item.ProductName</td>
+					<td><img src="@item.ProductImage" style="width:100px;height:100px;"></td>
+					<td>
+						@item.CategoryID
+					</td>
+				</tr>
+			}
+		}
+
+
+	</tbody>
+</table>

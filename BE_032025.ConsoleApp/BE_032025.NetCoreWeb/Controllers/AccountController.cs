@@ -1,10 +1,16 @@
 ﻿using BE_032025.NetCoreWeb.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BE_032025.NetCoreWeb.Controllers
 {
     public class AccountController : Controller
     {
+        private readonly IConfiguration _configuration;
+        public AccountController(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
         public IActionResult Index()
         {
             return View();
@@ -21,21 +27,17 @@ namespace BE_032025.NetCoreWeb.Controllers
         {
             try
             {
-                if (string.IsNullOrEmpty(requestData.email)
-                    || string.IsNullOrEmpty(requestData.password))
+                if (string.IsNullOrEmpty(requestData.UserName)
+                    || string.IsNullOrEmpty(requestData.Password))
                 {
                     ViewBag.Notice = "Email hoặc mật khẩu không được để trống";
                     return View();
                 }
 
-                if (!requestData.email.Contains("@"))
-                {
-                    ViewBag.Notice = "Email không hợp lệ";
-                    return View();
-                }
+              
 
-                if (!BE_032025.CommonNetcore.Sercurity.CheckXSSInput(requestData.email)
-                    || !BE_032025.CommonNetcore.Sercurity.CheckXSSInput(requestData.password))
+                if (!BE_032025.CommonNetcore.Sercurity.CheckXSSInput(requestData.UserName)
+                    || !BE_032025.CommonNetcore.Sercurity.CheckXSSInput(requestData.Password))
                 {
                     ViewBag.Notice = "Email hoặc mật khẩu không hợp lệ";
                     return View();
@@ -44,7 +46,7 @@ namespace BE_032025.NetCoreWeb.Controllers
                 // Giả sử bạn có một phương thức để xác thực người dùng
 
 
-                ViewBag.Notice = "Đăng nhập thành công với email: " + requestData.email;
+                ViewBag.Notice = "Đăng nhập thành công với email: " + requestData.UserName;
             }
             catch (Exception ex)
             {
@@ -61,26 +63,31 @@ namespace BE_032025.NetCoreWeb.Controllers
         {
             try
             {
-                if (string.IsNullOrEmpty(requestData.email)
-                    || string.IsNullOrEmpty(requestData.password))
+                if (string.IsNullOrEmpty(requestData.UserName)
+                    || string.IsNullOrEmpty(requestData.Password))
                 {
                     return Json(new { ResponseCode = -1, Message = "Dữ liệu không hợp lệ" });
                 }
 
-                if (!requestData.email.Contains("@"))
-                {
-                    return Json(new { ResponseCode = -3, Message = "Email không hợp lệ" });
-                }
+                
 
-                if (!BE_032025.CommonNetcore.Sercurity.CheckXSSInput(requestData.email)
-                    || !BE_032025.CommonNetcore.Sercurity.CheckXSSInput(requestData.password))
+                if (!BE_032025.CommonNetcore.Sercurity.CheckXSSInput(requestData.UserName)
+                    || !BE_032025.CommonNetcore.Sercurity.CheckXSSInput(requestData.Password))
                 {
-                    return Json(new { ResponseCode = -2, Message = "Email hoặc mật khẩu không hợp lệ" });
+                    return Json(new { ResponseCode = -2, Message = "tài khoản hoặc mật khẩu không hợp lệ" });
                 }
 
                 // Giả sử bạn có một phương thức để xác thực người dùng
+                var URL = _configuration["API_URL:BaseUrl"]+ "/api/Authen/Login"; // Đặt URL của API bạn muốn gọi
+                var RequestDataJson = System.Text.Json.JsonSerializer.Serialize(requestData);
 
-                return Json(new { ResponseCode = 1, Message = "Đăng nhập thành công với email: " + requestData.email });
+                var resultJson =  BE_032025.CommonNetcore.HttpHelper.HttpPost(URL, RequestDataJson);
+                var result = System.Text.Json.JsonSerializer.Deserialize<AccountLoginResponse>(resultJson);
+
+                HttpContext.Session.SetString("login", result.AccountID.ToString());
+
+
+                return Json(result);
 
 
             }

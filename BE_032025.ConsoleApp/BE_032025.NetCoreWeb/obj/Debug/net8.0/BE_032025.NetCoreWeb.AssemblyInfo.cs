@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BE_032025.NetCoreWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+34f918e8700ba4628c09525e029c23271f1d586d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c47a8c248af659445ca43688efb03879e15a4e80")]
 [assembly: System.Reflection.AssemblyProductAttribute("BE_032025.NetCoreWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BE_032025.NetCoreWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

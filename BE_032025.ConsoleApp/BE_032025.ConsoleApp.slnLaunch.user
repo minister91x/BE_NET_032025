@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "BE_032025.NetCoreAPI\\BE_032025.NetCoreAPI.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "BE_032025.NetCoreWeb\\BE_032025.NetCoreWeb.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

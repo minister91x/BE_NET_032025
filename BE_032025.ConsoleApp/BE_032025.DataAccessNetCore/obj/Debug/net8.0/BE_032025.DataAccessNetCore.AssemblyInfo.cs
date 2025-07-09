@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BE_032025.DataAccessNetCore")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b797d1881f800f9f563a992cd43f2c463d8d3467")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c47a8c248af659445ca43688efb03879e15a4e80")]
 [assembly: System.Reflection.AssemblyProductAttribute("BE_032025.DataAccessNetCore")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BE_032025.DataAccessNetCore")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

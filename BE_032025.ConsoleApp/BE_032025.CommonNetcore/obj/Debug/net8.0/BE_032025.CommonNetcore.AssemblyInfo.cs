@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BE_032025.CommonNetcore")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7531480301e6c1e07385a1b849e242ef0e74f055")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c47a8c248af659445ca43688efb03879e15a4e80")]
 [assembly: System.Reflection.AssemblyProductAttribute("BE_032025.CommonNetcore")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BE_032025.CommonNetcore")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
